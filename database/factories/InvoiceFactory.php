@@ -18,7 +18,7 @@ class InvoiceFactory extends Factory
         $users = User::where('is_admin', 0)->pluck('id')->toArray();
         return [
             'user_id' => $this->faker->randomElement($users),
-            'invoice_year' => 2022,
+            'invoice_year' => $this->faker->randomElement(['2015','2016','2014','2018','2019','2020','2021','2022']),
             'invoice_month' => $this->faker->month,
             'consumption' => $this->faker->numerify('#####'),
             'group' => $this->faker->randomElement(['A', 'B', 'C']),

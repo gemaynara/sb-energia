@@ -1,7 +1,7 @@
 <script src="{{asset('js/app.js')}}"></script>
 <!-- jQuery -->
 <script src="{{asset('vendors/bower_components/jquery/dist/jquery.min.js')}}"></script>
-
+<script src="{{asset('js/jquery.mask.js')}}"></script>
 <!-- Bootstrap Core JavaScript -->
 <script src="{{asset('vendors/bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
 <!-- Data table JavaScript -->

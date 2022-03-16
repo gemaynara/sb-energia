@@ -26,10 +26,10 @@
                 </a>
                 <ul id="ecom_dr" class="collapse collapse-level-1">
                     <li>
-                        <a href="#">Clientes</a>
+                        <a href="{{route('clients.index')}}">Clientes</a>
                     </li>
                     <li>
-                        <a href="#">Distribuidoras de Energia</a>
+                        <a href="{{route('distributors.index')}}">Distribuidoras de Energia</a>
                     </li>
 
                 </ul>
@@ -38,7 +38,7 @@
 
             <li>
                 <a href="javascript:void(0);" data-toggle="collapse" data-target="#ui_dr">
-                    <div class="pull-left"><i class="ti-pencil-alt  mr-20"></i><span
+                    <div class="pull-left"><i class="ti-layout-grid3  mr-20"></i><span
                             class="right-nav-text">Gestão</span></div>
                     <div class="pull-right"><i class="ti-angle-down "></i></div>
                     <div class="clearfix"></div>

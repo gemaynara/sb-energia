@@ -23,6 +23,7 @@ class CreateClientsTable extends Migration
             $table->integer('installation_code');
             $table->date('birth')->nullable();
             $table->char('auto_billing')->default('N');
+            $table->decimal('discount', 11,2)->nullable();
             $table->string('phone', 15)->nullable();
             $table->string('zip_code', 9)->nullable();
             $table->string('address', 200)->nullable();

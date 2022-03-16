@@ -15,11 +15,10 @@ class CreateDistributorsTable extends Migration
     {
         Schema::create('distributors', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->on('users')->references('id');
+            $table->string('name', 200);
             $table->string('cnpj', 18);
             $table->decimal('value_te', 11,2);
-            $table->decimal('value_usd', 11,2);
+            $table->decimal('value_tusd', 11,2);
             $table->decimal('value_icms', 11,2);
             $table->boolean('active')->default(1);
             $table->timestamps();

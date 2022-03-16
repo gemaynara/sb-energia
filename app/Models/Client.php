@@ -17,6 +17,7 @@ class Client extends Model
         'installation_code',
         'birth',
         'auto_billing',
+        'discount',
         'phone',
         'address',
         'zip_code',
@@ -26,4 +27,8 @@ class Client extends Model
         'city',
         'state',
     ];
+
+    public function user(){
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }

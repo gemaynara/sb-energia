@@ -12,10 +12,12 @@ class Distributor extends Model
     protected $table= 'distributors';
 
     protected $fillable =[
-        'user_id',
+        'name',
         'cnpj',
         'value_te',
-        'value_usd',
+        'value_tusd',
         'value_icms'
     ];
+
+
 }

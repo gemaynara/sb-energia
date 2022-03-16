@@ -14,13 +14,12 @@ class DistributorFactory extends Factory
      */
     public function definition()
     {
-        $users = User::pluck('id')->toArray();
         return [
-            'user_id' => $this->faker->randomElement($users),
-            'cnpj'=>'00.000.000/0001-00',
-            'value_te'=> $this->faker->numerify('###'),
-            'value_usd' =>$this->faker->numerify('###'),
-            'value_icms'=> $this->faker->numerify('###')
+            'name' => $this->faker->company,
+            'cnpj' => $this->faker->numerify('##.###.###/0001-##'),
+            'value_te' => $this->faker->numerify('###'),
+            'value_tusd' => $this->faker->numerify('###'),
+            'value_icms' => $this->faker->numerify('###')
         ];
     }
 }

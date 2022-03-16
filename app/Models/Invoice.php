@@ -11,7 +11,7 @@ class Invoice extends Model
 
     protected $table = 'invoices';
     protected $fillable = [
-        'client_id',
+        'user_id',
         'invoice_year',
         'invoice_month',
         'consumption',
@@ -22,4 +22,13 @@ class Invoice extends Model
         'fare_value',
         'status'
     ];
+
+
+    public function client(){
+        return $this->belongsTo(Client::class, 'user_id');
+    }
+
+    public function user(){
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }

@@ -33,7 +33,7 @@
                                             <td>{{$client->user->name}}</td>
                                             <td>{{$client->cpf_cnpj}}</td>
                                             <td>
-                                                <a href="{{route('invoices.client', $client->id)}}" class="text-inverse pr-10 " title="Faturas"
+                                                <a href="{{route('invoices.client', $client->user->id)}}" class="text-inverse pr-10 " title="Faturas"
                                                    data-toggle="tooltip" data-original-title="Faturas"><i
                                                         class="zmdi zmdi-eye txt-skyblue"></i></a>
 

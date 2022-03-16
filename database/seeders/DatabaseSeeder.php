@@ -16,9 +16,9 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(StatesTableSeeder::class);
 
-        \App\Models\User::factory(10)->create();
+        \App\Models\User::factory(60)->create();
         \App\Models\Distributor::factory(10)->create();
-        \App\Models\Client::factory(20)->create();
-        \App\Models\Invoice::factory(200)->create();
+        \App\Models\Client::factory(50)->create();
+        \App\Models\Invoice::factory(1000)->create();
     }
 }

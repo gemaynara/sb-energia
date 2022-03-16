@@ -15,12 +15,12 @@ class ClientFactory extends Factory
      */
     public function definition()
     {
-        $users = User::pluck('id')->toArray();
+        $users = User::pluck('id')->where('is_admin', 0)->toArray();
         $distributors = Distributor::pluck('id')->toArray();
         return [
             'user_id' => $this->faker->randomElement($users),
             'distributor_id' =>$this->faker->randomElement($distributors),
-            'cpf_cnpj'=> '123.456.789-00',
+            'cpf_cnpj'=> $this->faker->numerify('###.###.###-##'),
             'installation_code'=> $this->faker->randomDigit(),
             'birth' => $this->faker->date,
             'auto_billing' => $this->faker->randomElement(['S', 'N']),

@@ -50,15 +50,19 @@
                                                 @endif
                                             </td>
                                             <td>
-                                                <button class="btn btn-warning btn-icon-anim btn-square btn-edit"
-                                                        href="{{route('clients.edit', $client->id)}}"
-                                                        title="Editar">
-                                                    <i class="fa fa-pencil"></i></button>
+                                                <a href="{{route('invoices.client', $client->id)}}" class="text-inverse pr-10 " title="Faturas"
+                                                   data-toggle="tooltip" data-original-title="Faturas"><i
+                                                        class="zmdi zmdi-money txt-skyblue"></i></a>
 
-                                                <button class="btn btn-success btn-icon-anim btn-square btn-edit"
-                                                        href="{{route('invoices.client', $client->id)}}"
-                                                        title="Faturas">
-                                                    <i class="fa fa-money"></i></button>
+                                                <a href="{{route('clients.edit', $client->id)}}" class="text-inverse pr-10 " title="Imprimir"
+                                                   data-toggle="tooltip" data-original-title="Editar"><i
+                                                        class="zmdi zmdi-edit txt-info"></i></a>
+
+                                                <a href="javascript:void(0)" class="text-inverse" title=""
+                                                    data-toggle="tooltip" data-original-title="Delete"><i
+                                                        class="zmdi zmdi-delete txt-grey"></i></a>
+
+
 
 {{--                                                @if($distributor->active)--}}
 {{--                                                    <button data-route="{{route('distributors.disable', $distributor->id)}}"--}}

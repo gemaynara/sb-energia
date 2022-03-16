@@ -9,6 +9,7 @@
 
 <!-- Slimscroll JavaScript -->
 <script src="{{asset('js/jquery.slimscroll.js')}}"></script>
+<script src="{{asset('vendors/chart.js/Chart.min.js')}}"></script>
 
 <!-- Progressbar Animation JavaScript -->
 <script src="{{asset('vendors/bower_components/select2/dist/js/select2.js')}}"></script>
@@ -60,6 +61,7 @@
 <!-- Init JavaScript -->
 <script src="{{asset('js/init.js')}}"></script>
 <script src="{{asset('js/custom.js')}}"></script>
+<script src="{{asset('js/client-chart.js')}}"></script>
 
 <!-- Form Flie Upload Data JavaScript -->
 <script src="{{asset('dist/js/form-file-upload-data.js')}}"></script>

@@ -23,6 +23,14 @@ class Invoice extends Model
         'status'
     ];
 
+    protected $appends = ['invoice_month'];
+
+    public function getInvoiceMonthAttribute()
+    {
+        $monthsName = array('', 'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro');
+        return $monthsName[$this->invoice_month];
+
+    }
 
     public function client(){
         return $this->belongsTo(Client::class, 'user_id');

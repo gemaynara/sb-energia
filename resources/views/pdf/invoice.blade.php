@@ -27,7 +27,7 @@
         <div class="content" style="padding: 0px 15px 0px 15px">
             <table style="width: 100%;">
                 <tr>
-                    <td style="width: 20%;text-align: center;border-left: 1px solid black;border-right: 2px solid black;border-top: 1px solid black">
+                    <td style="width: 20%;text-align: center;border: 1px solid blackk; background-color: #ccc">
                         Nº CLIENTE
                     </td>
                     <td style="width: 80%;padding-left: 150px">SB ENERGIA - CONSULTORIA, PROJETOS E INSTALACOES
@@ -35,8 +35,8 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="width: 20%;text-align: center;border-left: 1px solid black;border-right: 2px solid black;border-bottom: 2px solid black">
-                        3
+                    <td style="width: 20%;text-align: center;border: 1px solid blackk; background-color: #ccc">
+                        {{$invoice->user->id}}
                     </td>
                     <td style="width: 80%;padding-left: 150px">RUA AROAZES 801 SL101 - Jacarepagua, Rio de Janeiro/RJ
                     </td>

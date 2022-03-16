@@ -2,8 +2,8 @@
 @section('content')
     <!-- Title -->
     <div class="row heading-bg">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <h5 class="txt-dark">Faturas do cliente: {{$client->name}}</h5>
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+            <h5 class="txt-dark">Minhas Faturas</h5>
         </div>
 
     </div>
@@ -32,7 +32,8 @@
                                     <tbody>
                                     @foreach($invoices as $invoice)
                                         <tr role="row">
-                                            <td class="txt-dark">{{$invoice->invoice_month}}
+                                            <td class="txt-dark">
+                                                {{\App\Http\Helpers\Helper::getRefernceInvoice($invoice->invoice_month, $invoice->invoice_year)}}
                                             </td>
                                             <td class="txt-dark">{{\Carbon\Carbon::parse($invoice->due_date)->format('d/m/Y')}}</td>
 
@@ -44,10 +45,7 @@
                                             <td>
                                                 <a href="{{route('invoices.print', $invoice->id)}}" class="text-inverse pr-10 " title="Imprimir"
                                                    data-toggle="tooltip" data-original-title="Imprimir"><i
-                                                        class="zmdi zmdi-print txt-info"></i></a><a
-                                                    href="javascript:void(0)" class="text-inverse" title=""
-                                                    data-toggle="tooltip" data-original-title="Delete"><i
-                                                        class="zmdi zmdi-delete txt-grey"></i></a>
+                                                        class="zmdi zmdi-print txt-info"></i></a>
                                             </td>
 
                                         </tr>

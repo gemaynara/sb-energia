@@ -23,6 +23,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('logout', [\App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+
+    Route::get('/dashboardClient', [App\Http\Controllers\DashboardController::class, 'dashboardClient']);
+
     Route::group(['prefix' => 'distributors'], function () {
         Route::get('/', [\App\Http\Controllers\DistributorController::class, 'index'])->name('distributors.index');
         Route::get('/create', [\App\Http\Controllers\DistributorController::class, 'create'])->name('distributors.create');
@@ -44,6 +47,8 @@ Route::group(['middleware' => 'auth'], function () {
     });
 
     Route::group(['prefix' => 'invoices'], function () {
+        Route::get('/', [\App\Http\Controllers\InvoiceController::class, 'index'])->name('invoices.index');
+        Route::get('/my-invoices', [\App\Http\Controllers\InvoiceController::class, 'myInvoices'])->name('invoices.my-invoices');
         Route::get('/client/{id}', [\App\Http\Controllers\InvoiceController::class, 'invoiceByClient'])->name('invoices.client');
         Route::get('/print/{id}', [\App\Http\Controllers\InvoiceController::class, 'printInvoice'])->name('invoices.print');
     });

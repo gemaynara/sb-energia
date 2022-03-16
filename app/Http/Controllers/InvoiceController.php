@@ -29,7 +29,7 @@ class InvoiceController extends Controller
         $client = User::find($id);
         $invoices = Invoice::with('client', 'user')->where('user_id', $id)
             ->orderBy('invoice_year', 'desc', 'invoice_month', 'desc')->get();
-        return view('pages.invoices.invoice-by-client', ['invoices' => $invoices, 'client'=>$client]);
+        return view('pages.invoices.invoice-by-client', ['invoices' => $invoices, 'client' => $client]);
     }
 
     public function printInvoice($id)

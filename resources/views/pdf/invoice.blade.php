@@ -53,7 +53,7 @@
                             B</strong></td>
                     <td style="width: 20%;text-align: center;"><strong>DATA VENCIMENTO</strong></td>
                     <td style="width: 10%;text-align: center;">
-                        <strong>{{\Carbon\Carbon::parse($invoice->due_date)->format('d/m/Y')}}</strong></td>
+                        <strong>{{$invoice->due_date}}</strong></td>
                 </tr>
             </table>
             <br>
@@ -132,7 +132,7 @@
                     </td>
                     <td style="width: 15%;text-align: left;padding-left: 10px;border-left: solid 2px #acd2f7">
                         <table style="width: 100%;">
-                            <td style="width: 70%;text-align: left;"> {{\App\Http\Helpers\Helper::getRefernceInvoice($invoice->invoice_month, $invoice->invoice_year)}} 7</td>
+                            <td style="width: 70%;text-align: left;"> {{$invoice->invoice_month}}/{{ $invoice->invoice_year}} 7</td>
                             <td style="width: 30%;text-align: center;">0</td>
                         </table>
                     </td>

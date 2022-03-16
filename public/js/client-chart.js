@@ -10,7 +10,7 @@ $(document).ready(function () {
         var consumption = resultado.consumption;
         consumption.forEach((data) => {
             array_consumption.push(data.consumption)
-            array_months.push(data.month)
+            array_months.push(data.invoice_month)
         })
 
         if ($('#month_consumption').length > 0) {

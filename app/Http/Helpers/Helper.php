@@ -24,10 +24,5 @@ class Helper
         }
     }
 
-    public static function getRefernceInvoice($month, $year)
-    {
-        $monthsName = array('', 'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro');
 
-        return $monthsName[$month] . "/" . $year;
-    }
 }

@@ -32,10 +32,8 @@
                                     <tbody>
                                     @foreach($invoices as $invoice)
                                         <tr role="row">
-                                            <td class="txt-dark">
-                                                {{\App\Http\Helpers\Helper::getRefernceInvoice($invoice->invoice_month, $invoice->invoice_year)}}
-                                            </td>
-                                            <td class="txt-dark">{{\Carbon\Carbon::parse($invoice->due_date)->format('d/m/Y')}}</td>
+                                            <td class="txt-dark">{{$invoice->invoice_month}}/ {{$invoice->invoice_year}}</td>
+                                            <td class="txt-dark">{{$invoice->due_date}}</td>
 
                                             <td class="txt-dark">{{$invoice->consumption}}</td>
                                             <td>@money($invoice->fare_value)</td>

@@ -27,24 +27,7 @@
                                 <div class="pt-20">
                                     <canvas id="month_consumption" height="100"></canvas>
                                 </div>
-                                <ul class="flex-stat mt-40">
-                                    <li>
-                                        <span class="block">Weekly Users</span>
-                                        <span class="block txt-dark weight-500 font-18"><span
-                                                class="counter-anim">3,24,222</span></span>
-                                    </li>
-                                    <li>
-                                        <span class="block">Monthly Users</span>
-                                        <span class="block txt-dark weight-500 font-18"><span
-                                                class="counter-anim">1,23,432</span></span>
-                                    </li>
-                                    <li>
-                                        <span class="block">Trend</span>
-                                        <span class="block">
-    														<i class="zmdi zmdi-trending-up txt-success font-24"></i>
-    													</span>
-                                    </li>
-                                </ul>
+
                             </div>
                         </div>
                     </div>

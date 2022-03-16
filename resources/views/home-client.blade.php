@@ -22,10 +22,10 @@
                             </div>
                             <div class="clearfix"></div>
                         </div>
-                        <div class="panel-wrapper collapse in">
+                        <div class="panel-wrapper collapse in" >
                             <div class="panel-body">
-                                <div class="pt-20">
-                                    <canvas id="month_consumption" height="100"></canvas>
+                                <div class="pt-20 ">
+                                    <canvas id="month_consumption" height="100" data-chart="{{route('dashboard-client')}}"></canvas>
                                 </div>
 
                             </div>

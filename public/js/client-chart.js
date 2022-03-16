@@ -2,9 +2,9 @@
 
 $(document).ready(function () {
     "use strict";
-    var url = window.location.host;
+    var url = $("#month_consumption").data('chart');
     console.log(url)
-    $.get(url+'/dashboardClient', function (resultado) {
+    $.get(url, function (resultado) {
         let array_consumption = []
         let array_months = []
 

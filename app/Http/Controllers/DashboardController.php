@@ -15,11 +15,12 @@ class DashboardController extends Controller
         $user = auth()->user();
 
         $consumption = Invoice::where('user_id', $user->id)
-            ->select(DB::raw('invoice_month'), 'invoice_year as year',
+            ->select('invoice_month', 'invoice_year as year',
                 DB::raw('SUM(consumption) as consumption'), DB::raw('(consumption*fare_value) as total'))
             ->where('invoice_year', $year)
-            ->groupBy(DB::raw('invoice_month'), 'invoice_year', 'total')
+            ->groupBy('invoice_month', 'invoice_year', 'total')
             ->orderBY('invoice_month', 'asc')
+            ->take(6)
             ->get();
 
         return ['consumption' => $consumption];

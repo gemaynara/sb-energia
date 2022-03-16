@@ -24,7 +24,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-    Route::get('/dashboardClient', [App\Http\Controllers\DashboardController::class, 'dashboardClient']);
+    Route::get('/dashboardClient', [App\Http\Controllers\DashboardController::class, 'dashboardClient'])->name('dashboard-client');
 
     Route::group(['prefix' => 'distributors'], function () {
         Route::get('/', [\App\Http\Controllers\DistributorController::class, 'index'])->name('distributors.index');

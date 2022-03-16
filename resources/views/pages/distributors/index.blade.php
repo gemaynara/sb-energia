@@ -50,22 +50,28 @@
                                                     <span class="label label-danger ">Inativo</span>
                                                 @endif
                                             </td>
+
                                             <td>
-                                                <button class="btn btn-warning btn-icon-anim btn-square btn-edit"
-                                                        href="{{route('distributors.edit', $distributor->id)}}"
-                                                        title="Editar">
-                                                    <i class="fa fa-pencil"></i></button>
+
+                                                <a href="{{route('distributors.edit', $distributor->id)}}"
+                                                   class="text-inverse pr-10 "
+                                                   title="Editar"
+                                                   data-toggle="tooltip" data-original-title="Editar"><i
+                                                        class="zmdi zmdi-edit txt-info"></i></a>
+
 
                                                 @if($distributor->active)
-                                                    <button data-route="{{route('distributors.disable', $distributor->id)}}"
-                                                            data-id="{{$distributor->id}}" type="button" data-type="PUT"
-                                                            class="btn btn-danger btn-icon-anim btn-square btn-delete"
-                                                            title="Desativar"><i class="icon-trash"></i></button>
+                                                    <a href="{{route('distributors.disable', $distributor->id)}}"
+                                                       data-id="{{$distributor->id}}"
+                                                       class="text-inverse btn-disable" title="Apagar"
+                                                       data-toggle="tooltip" data-original-title="Delete"><i
+                                                            class="zmdi zmdi-delete txt-grey"></i></a>
                                                 @else
-                                                    <button data-route="{{route('distributors.active', $distributor->id)}}"
-                                                            data-id="{{$distributor->id}}" type="button" data-type="PUT"
-                                                            class="btn btn-primary btn-icon-anim btn-square btn-active"
-                                                            title="Ativar"><i class="icon-check"></i></button>
+                                                    <a href="{{route('distributors.active', $distributor->id)}}"
+                                                       data-id="{{$distributor->id}}"
+                                                       class="text-inverse btn-enable" title="Ativar"
+                                                       data-toggle="tooltip" data-original-title="Delete"><i
+                                                            class="zmdi zmdi-check txt-grey"></i></a>
                                                 @endif
 
 

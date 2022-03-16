@@ -83,11 +83,53 @@ $(document).ready(function () {
         return false;
     });
 
-    $('.btn-active').on('click', function (e) {
+    $('.btn-disable').on('click', function (e) {
         e.preventDefault();
-        var url = $(this).data('route');
+        var url = $(this).attr('href');
         var id = $(this).data('id');
-        var type = $(this).data('type');
+        swal({
+            title: "Desativar Registro",
+            text: "Você confirma que deseja desativar  o registro?",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#f83f37",
+            confirmButtonText: "Sim!",
+            cancelButtonText: "Não!",
+            closeOnConfirm: false,
+            closeOnCancel: false
+        }, function (isConfirm) {
+            if (isConfirm) {
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+                $.ajax({
+                    type: 'PUT',
+                    url: url,
+                    data: {'id': id},
+                    success: function (data) {
+                        swal("Apagado!", "O registro foi desativado com sucesso.", "success");
+                        setTimeout(() => {
+                            location.reload();
+                        }, 1000);
+                    },
+                    error: function (data) {
+                        swal("Erro!", "Ocorreu um erro ao desativar o registro.", "error");
+                        console.log(data)
+                    }
+                })
+            } else {
+                swal("Cancelado!", "O registro não foi apagado.", "error");
+            }
+        });
+        return false;
+    });
+
+    $('.btn-enable').on('click', function (e) {
+        e.preventDefault();
+        var url = $(this).attr('href');
+        var id = $(this).data('id');
         swal({
             title: "Ativar Registro",
             text: "Você confirma que deseja ativar  o registro?",
@@ -106,17 +148,17 @@ $(document).ready(function () {
                     }
                 });
                 $.ajax({
-                    type: type,
+                    type: 'PUT',
                     url: url,
                     data: {'id': id},
                     success: function (data) {
-                        swal("Apagado!", "O registro foi apagado com sucesso.", "success");
+                        swal("Ativado!", "O registro foi ativado com sucesso.", "success");
                         setTimeout(() => {
                             location.reload();
                         }, 1000);
                     },
                     error: function (data) {
-                        swal("Erro!", "Ocorreu um erro ao apagar o registro.", "error");
+                        swal("Erro!", "Ocorreu um erro ao ativar registro.", "error");
                         console.log(data)
                     }
                 })

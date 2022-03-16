@@ -53,6 +53,19 @@
 
                 </ul>
             </li>
+            <li>
+                <a href="javascript:void(0);" data-toggle="collapse" data-target="#access">
+                    <div class="pull-left"><i class="ti-user mr-20"></i><span class="right-nav-text">Acesso</span></div>
+                    <div class="pull-right"><i class="ti-angle-down "></i></div>
+                    <div class="clearfix"></div>
+                </a>
+                <ul id="access" class="collapse collapse-level-1">
+
+                    <li>
+                        <a href="{{route('users.index')}}">Usuários</a>
+                    </li>
+                </ul>
+            </li>
     </ul>
     @endif
 </div>

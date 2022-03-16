@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Client;
+use App\Models\Distributor;
 use App\Models\Invoice;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -24,6 +27,19 @@ class DashboardController extends Controller
             ->get();
 
         return ['consumption' => $consumption];
+
+
+    }
+
+    public function dashboardAdmin()
+    {
+
+        $year = date('Y');
+        $user = auth()->user();
+        $clients = Client::all()->count();
+        $distributors = Distributor::all()->count();
+
+        return ['clients' => $clients, 'distributors' => $distributors];
 
 
     }

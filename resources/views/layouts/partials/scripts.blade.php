@@ -61,6 +61,7 @@
 <!-- Init JavaScript -->
 <script src="{{asset('js/init.js')}}"></script>
 <script src="{{asset('js/custom.js')}}"></script>
+<script src="{{asset('js/admin-chart.js')}}"></script>
 <script src="{{asset('js/client-chart.js')}}"></script>
 
 <!-- Form Flie Upload Data JavaScript -->

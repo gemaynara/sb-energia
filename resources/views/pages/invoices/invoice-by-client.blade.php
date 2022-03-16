@@ -41,12 +41,9 @@
                                             <td>{{\App\Http\Helpers\Helper::getStatusInvoice($invoice->status)}}</td>
 
                                             <td>
-                                                <a href="{{route('invoices.print', $invoice->id)}}" class="text-inverse pr-10 " title="Imprimir"
+                                                <a target="_blank" href="{{route('invoices.print', $invoice->id)}}" class="text-inverse pr-10 " title="Imprimir"
                                                    data-toggle="tooltip" data-original-title="Imprimir"><i
-                                                        class="zmdi zmdi-print txt-info"></i></a><a
-                                                    href="javascript:void(0)" class="text-inverse" title=""
-                                                    data-toggle="tooltip" data-original-title="Delete"><i
-                                                        class="zmdi zmdi-delete txt-grey"></i></a>
+                                                        class="zmdi zmdi-print txt-info"></i></a>
                                             </td>
 
                                         </tr>

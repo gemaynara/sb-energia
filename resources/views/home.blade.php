@@ -1,7 +1,7 @@
 @extends('layouts.template')
 @section('content')
-        <div class="row">
-            <div class="col-sm-8">
+        <div class="row " id="chart-admin" data-chart="{{route('dashboard-admin')}}">
+            <div class="col-sm-12">
                 <div class="row">
                     <div class="col-sm-6 col-xs-12">
                         <div class="panel panel-default card-view pa-0">
@@ -11,21 +11,21 @@
                                         <div class="container-fluid">
                                             <div class="row">
                                                 <div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
-                                                    <span class="txt-dark block counter"><span class="counter-anim">914,001</span></span>
-                                                    <span class="capitalize-font block">visits</span>
+                                                    <span class="txt-dark block counter"><span class="counter-anim clients"></span></span>
+                                                    <span class="capitalize-font block">clientes</span>
                                                 </div>
                                                 <div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
-                                                    <i class="icon-globe data-right-rep-icon"></i>
+                                                    <i class="icon-user data-right-rep-icon"></i>
                                                 </div>
                                             </div>
-                                            <div class="progress-anim">
-                                                <div class="progress">
-                                                    <div class="progress-bar progress-bar-orange
-    															wow animated progress-animated" role="progressbar"
-                                                         aria-valuenow="70" aria-valuemin="0"
-                                                         aria-valuemax="100"></div>
-                                                </div>
-                                            </div>
+{{--                                            <div class="progress-anim">--}}
+{{--                                                <div class="progress">--}}
+{{--                                                    <div class="progress-bar progress-bar-orange--}}
+{{--    															wow animated progress-animated" role="progressbar"--}}
+{{--                                                         aria-valuenow="70" aria-valuemin="0"--}}
+{{--                                                         aria-valuemax="100"></div>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
                                         </div>
                                     </div>
                                 </div>
@@ -40,21 +40,21 @@
                                         <div class="container-fluid">
                                             <div class="row">
                                                 <div class="col-xs-6 text-center pl-0 pr-0 data-wrap-left">
-                                                    <span class="txt-dark block counter"><span class="counter-anim">46.41</span>%</span>
-                                                    <span class="capitalize-font block">bounce rate</span>
+                                                    <span class="txt-dark block counter"><span class="counter-anim distributors">46.41</span>%</span>
+                                                    <span class="capitalize-font block">distribuidoras</span>
                                                 </div>
                                                 <div class="col-xs-6 text-center  pl-0 pr-0 data-wrap-right">
-                                                    <i class="icon-eye  data-right-rep-icon"></i>
+                                                    <i class="icon-energy data-right-rep-icon"></i>
                                                 </div>
                                             </div>
-                                            <div class="progress-anim">
-                                                <div class="progress">
-                                                    <div class="progress-bar progress-bar-orange
-    															wow animated progress-animated" role="progressbar"
-                                                         aria-valuenow="80" aria-valuemin="0"
-                                                         aria-valuemax="100"></div>
-                                                </div>
-                                            </div>
+{{--                                            <div class="progress-anim">--}}
+{{--                                                <div class="progress">--}}
+{{--                                                    <div class="progress-bar progress-bar-orange--}}
+{{--    															wow animated progress-animated" role="progressbar"--}}
+{{--                                                         aria-valuenow="80" aria-valuemin="0"--}}
+{{--                                                         aria-valuemax="100"></div>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
                                         </div>
                                     </div>
                                 </div>
@@ -482,317 +482,317 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4">
-                <div class="row">
-                    <div class="col-sm-12 col-xs-12">
-                        <div class="panel panel-default border-panel card-view">
-                            <div class="panel-heading">
-                                <div class="pull-left">
-                                    <h6 class="panel-title txt-dark">Discount for You</h6>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="panel-wrapper collapse in">
-                                <div class="panel-body">
-                                    <div class="sm-data-box-4 with-icon">
-                                        <div class="relative">
-                                            <div class="data-wrap-left">
-                                                <i class="icon-badge font-24"></i>
-                                            </div>
-                                            <div class="data-wrap-right">
-                                                <p>Use this deal code to get up to 15000 instant Discount. Hurry off
-                                                    ending soon! </p>
-                                                <div class="pt-15 uppercase-font">
-                                                    <span>Use code :</span><span class="txt-orange">TRES15</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-xs-12">
-                        <div class="panel panel-default border-panel card-view panel-refresh">
-                            <div class="refresh-container">
-                                <div class="la-anim-1"></div>
-                            </div>
-                            <div class="panel-heading">
-                                <div class="pull-left">
-                                    <h6 class="panel-title txt-dark">Traffic Types</h6>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="panel-wrapper collapse in">
-                                <div class="panel-body">
-                                    <div id="ct_chart_5" class="" style="height:215px;"></div>
-                                    <hr class="light-grey-hr row mt-10 mb-15"/>
-                                    <div class="label-chatrs">
-                                        <div class="">
-                                                    <span
-                                                        class="clabels-text font-12 inline-block txt-dark capitalize-font pull-left"><span
-                                                            class="block font-15 weight-500 mb-5">organic</span><span
-                                                            class="block txt-grey">356 visits</span></span>
-                                            <div class="pull-right"><span class="font-18">44.46%</span></div>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                    <hr class="light-grey-hr row mt-10 mb-15"/>
-                                    <div class="label-chatrs">
-                                        <div class="">
-                                                    <span
-                                                        class="clabels-text font-12 inline-block txt-dark capitalize-font pull-left"><span
-                                                            class="block font-15 weight-500 mb-5">Refrral</span><span
-                                                            class="block txt-grey">36 visits</span></span>
-                                            <div class="pull-right"><span class="font-18">5.46%</span></div>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                    <hr class="light-grey-hr row mt-10 mb-15"/>
-                                    <div class="label-chatrs">
-                                        <div class="">
-                                                    <span
-                                                        class="clabels-text font-12 inline-block txt-dark capitalize-font pull-left"><span
-                                                            class="block font-15 weight-500 mb-5">Other</span><span
-                                                            class="block txt-grey">245 visits</span></span>
-                                            <div class="pull-right"><span class="font-18">50%</span></div>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-xs-12">
-                        <div class="panel panel-default border-panel card-view panel-refresh">
-                            <div class="refresh-container">
-                                <div class="la-anim-1"></div>
-                            </div>
-                            <div class="panel-heading">
-                                <div class="pull-left">
-                                    <h6 class="panel-title txt-dark">Advertising & Promotions</h6>
-                                </div>
-                                <div class="pull-right">
-                                    <a href="#" class="pull-left inline-block refresh mr-15">
-                                        <i class="zmdi zmdi-replay"></i>
-                                    </a>
-                                    <div class="pull-left inline-block dropdown">
-                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"
-                                           aria-expanded="false" role="button"><i
-                                                class="zmdi zmdi-more-vert"></i></a>
-                                        <ul class="dropdown-menu bullet dropdown-menu-right" role="menu">
-                                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i
-                                                        class="icon wb-reply" aria-hidden="true"></i>option 1</a>
-                                            </li>
-                                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i
-                                                        class="icon wb-share" aria-hidden="true"></i>option 2</a>
-                                            </li>
-                                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i
-                                                        class="icon wb-trash" aria-hidden="true"></i>option 3</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="panel-wrapper collapse in">
-                                <div class="panel-body">
-                                    <div class="pt-20">
-                                        <canvas id="chart_2" height="210"></canvas>
-                                    </div>
-                                    <div class="label-chatrs text-center mt-30">
-                                        <div class="inline-block mr-15">
-                                            <span class="clabels inline-block bg-orange mr-5"></span>
-                                            <span
-                                                class="clabels-text font-12 inline-block txt-dark capitalize-font">Active</span>
-                                        </div>
-                                        <div class="inline-block mr-15">
-                                            <span class="clabels inline-block bg-orange-light-1 mr-5"></span>
-                                            <span
-                                                class="clabels-text font-12 inline-block txt-dark capitalize-font">Closed</span>
-                                        </div>
-                                        <div class="inline-block">
-                                            <span class="clabels inline-block bg-orange-light-2 mr-5"></span>
-                                            <span
-                                                class="clabels-text font-12 inline-block txt-dark capitalize-font">Pending</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-xs-12">
-                        <div class="panel panel-default border-panel card-view">
-                            <div class="panel-heading">
-                                <div class="pull-left">
-                                    <h6 class="panel-title txt-dark">Timelines</h6>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="panel-wrapper collapse in">
-                                <div class="panel-body">
-                                    <div class="streamline user-activity">
-                                        <div class="sl-item">
-                                            <a href="javascript:void(0)">
-                                                <div class="sl-avatar avatar avatar-sm avatar-circle">
-                                                    <img class="img-responsive img-circle" src="../img/user.png"
-                                                         alt="avatar"/>
-                                                </div>
-                                                <div class="sl-content">
-                                                    <p class="inline-block"><span
-                                                            class="capitalize-font txt-orange mr-5 weight-500">Clay Masse</span><span>invited to join the meeting in the conference room at 9.45 am</span>
-                                                    </p>
-                                                    <span
-                                                        class="block txt-grey font-12 capitalize-font">3 Min</span>
-                                                </div>
-                                            </a>
-                                        </div>
+{{--            <div class="col-sm-4">--}}
+{{--                <div class="row">--}}
+{{--                    <div class="col-sm-12 col-xs-12">--}}
+{{--                        <div class="panel panel-default border-panel card-view">--}}
+{{--                            <div class="panel-heading">--}}
+{{--                                <div class="pull-left">--}}
+{{--                                    <h6 class="panel-title txt-dark">Discount for You</h6>--}}
+{{--                                </div>--}}
+{{--                                <div class="clearfix"></div>--}}
+{{--                            </div>--}}
+{{--                            <div class="panel-wrapper collapse in">--}}
+{{--                                <div class="panel-body">--}}
+{{--                                    <div class="sm-data-box-4 with-icon">--}}
+{{--                                        <div class="relative">--}}
+{{--                                            <div class="data-wrap-left">--}}
+{{--                                                <i class="icon-badge font-24"></i>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="data-wrap-right">--}}
+{{--                                                <p>Use this deal code to get up to 15000 instant Discount. Hurry off--}}
+{{--                                                    ending soon! </p>--}}
+{{--                                                <div class="pt-15 uppercase-font">--}}
+{{--                                                    <span>Use code :</span><span class="txt-orange">TRES15</span>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="col-sm-12 col-xs-12">--}}
+{{--                        <div class="panel panel-default border-panel card-view panel-refresh">--}}
+{{--                            <div class="refresh-container">--}}
+{{--                                <div class="la-anim-1"></div>--}}
+{{--                            </div>--}}
+{{--                            <div class="panel-heading">--}}
+{{--                                <div class="pull-left">--}}
+{{--                                    <h6 class="panel-title txt-dark">Traffic Types</h6>--}}
+{{--                                </div>--}}
+{{--                                <div class="clearfix"></div>--}}
+{{--                            </div>--}}
+{{--                            <div class="panel-wrapper collapse in">--}}
+{{--                                <div class="panel-body">--}}
+{{--                                    <div id="ct_chart_5" class="" style="height:215px;"></div>--}}
+{{--                                    <hr class="light-grey-hr row mt-10 mb-15"/>--}}
+{{--                                    <div class="label-chatrs">--}}
+{{--                                        <div class="">--}}
+{{--                                                    <span--}}
+{{--                                                        class="clabels-text font-12 inline-block txt-dark capitalize-font pull-left"><span--}}
+{{--                                                            class="block font-15 weight-500 mb-5">organic</span><span--}}
+{{--                                                            class="block txt-grey">356 visits</span></span>--}}
+{{--                                            <div class="pull-right"><span class="font-18">44.46%</span></div>--}}
+{{--                                            <div class="clearfix"></div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <hr class="light-grey-hr row mt-10 mb-15"/>--}}
+{{--                                    <div class="label-chatrs">--}}
+{{--                                        <div class="">--}}
+{{--                                                    <span--}}
+{{--                                                        class="clabels-text font-12 inline-block txt-dark capitalize-font pull-left"><span--}}
+{{--                                                            class="block font-15 weight-500 mb-5">Refrral</span><span--}}
+{{--                                                            class="block txt-grey">36 visits</span></span>--}}
+{{--                                            <div class="pull-right"><span class="font-18">5.46%</span></div>--}}
+{{--                                            <div class="clearfix"></div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <hr class="light-grey-hr row mt-10 mb-15"/>--}}
+{{--                                    <div class="label-chatrs">--}}
+{{--                                        <div class="">--}}
+{{--                                                    <span--}}
+{{--                                                        class="clabels-text font-12 inline-block txt-dark capitalize-font pull-left"><span--}}
+{{--                                                            class="block font-15 weight-500 mb-5">Other</span><span--}}
+{{--                                                            class="block txt-grey">245 visits</span></span>--}}
+{{--                                            <div class="pull-right"><span class="font-18">50%</span></div>--}}
+{{--                                            <div class="clearfix"></div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="col-sm-12 col-xs-12">--}}
+{{--                        <div class="panel panel-default border-panel card-view panel-refresh">--}}
+{{--                            <div class="refresh-container">--}}
+{{--                                <div class="la-anim-1"></div>--}}
+{{--                            </div>--}}
+{{--                            <div class="panel-heading">--}}
+{{--                                <div class="pull-left">--}}
+{{--                                    <h6 class="panel-title txt-dark">Advertising & Promotions</h6>--}}
+{{--                                </div>--}}
+{{--                                <div class="pull-right">--}}
+{{--                                    <a href="#" class="pull-left inline-block refresh mr-15">--}}
+{{--                                        <i class="zmdi zmdi-replay"></i>--}}
+{{--                                    </a>--}}
+{{--                                    <div class="pull-left inline-block dropdown">--}}
+{{--                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"--}}
+{{--                                           aria-expanded="false" role="button"><i--}}
+{{--                                                class="zmdi zmdi-more-vert"></i></a>--}}
+{{--                                        <ul class="dropdown-menu bullet dropdown-menu-right" role="menu">--}}
+{{--                                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i--}}
+{{--                                                        class="icon wb-reply" aria-hidden="true"></i>option 1</a>--}}
+{{--                                            </li>--}}
+{{--                                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i--}}
+{{--                                                        class="icon wb-share" aria-hidden="true"></i>option 2</a>--}}
+{{--                                            </li>--}}
+{{--                                            <li role="presentation"><a href="javascript:void(0)" role="menuitem"><i--}}
+{{--                                                        class="icon wb-trash" aria-hidden="true"></i>option 3</a>--}}
+{{--                                            </li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                                <div class="clearfix"></div>--}}
+{{--                            </div>--}}
+{{--                            <div class="panel-wrapper collapse in">--}}
+{{--                                <div class="panel-body">--}}
+{{--                                    <div class="pt-20">--}}
+{{--                                        <canvas id="chart_2" height="210"></canvas>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="label-chatrs text-center mt-30">--}}
+{{--                                        <div class="inline-block mr-15">--}}
+{{--                                            <span class="clabels inline-block bg-orange mr-5"></span>--}}
+{{--                                            <span--}}
+{{--                                                class="clabels-text font-12 inline-block txt-dark capitalize-font">Active</span>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="inline-block mr-15">--}}
+{{--                                            <span class="clabels inline-block bg-orange-light-1 mr-5"></span>--}}
+{{--                                            <span--}}
+{{--                                                class="clabels-text font-12 inline-block txt-dark capitalize-font">Closed</span>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="inline-block">--}}
+{{--                                            <span class="clabels inline-block bg-orange-light-2 mr-5"></span>--}}
+{{--                                            <span--}}
+{{--                                                class="clabels-text font-12 inline-block txt-dark capitalize-font">Pending</span>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="col-sm-12 col-xs-12">--}}
+{{--                        <div class="panel panel-default border-panel card-view">--}}
+{{--                            <div class="panel-heading">--}}
+{{--                                <div class="pull-left">--}}
+{{--                                    <h6 class="panel-title txt-dark">Timelines</h6>--}}
+{{--                                </div>--}}
+{{--                                <div class="clearfix"></div>--}}
+{{--                            </div>--}}
+{{--                            <div class="panel-wrapper collapse in">--}}
+{{--                                <div class="panel-body">--}}
+{{--                                    <div class="streamline user-activity">--}}
+{{--                                        <div class="sl-item">--}}
+{{--                                            <a href="javascript:void(0)">--}}
+{{--                                                <div class="sl-avatar avatar avatar-sm avatar-circle">--}}
+{{--                                                    <img class="img-responsive img-circle" src="../img/user.png"--}}
+{{--                                                         alt="avatar"/>--}}
+{{--                                                </div>--}}
+{{--                                                <div class="sl-content">--}}
+{{--                                                    <p class="inline-block"><span--}}
+{{--                                                            class="capitalize-font txt-orange mr-5 weight-500">Clay Masse</span><span>invited to join the meeting in the conference room at 9.45 am</span>--}}
+{{--                                                    </p>--}}
+{{--                                                    <span--}}
+{{--                                                        class="block txt-grey font-12 capitalize-font">3 Min</span>--}}
+{{--                                                </div>--}}
+{{--                                            </a>--}}
+{{--                                        </div>--}}
 
-                                        <div class="sl-item">
-                                            <a href="javascript:void(0)">
-                                                <div class="sl-avatar avatar avatar-sm avatar-circle">
-                                                    <img class="img-responsive img-circle" src="../img/user1.png"
-                                                         alt="avatar"/>
-                                                </div>
-                                                <div class="sl-content">
-                                                    <p class="inline-block"><span
-                                                            class="capitalize-font txt-orange mr-5 weight-500">Evie Ono</span><span>added three new photos in the library</span>
-                                                    </p>
-                                                    <div class="activity-thumbnail">
-                                                        <img src="../img/thumb-1.jpg" alt="thumbnail"/>
-                                                        <img src="../img/thumb-2.jpg" alt="thumbnail"/>
-                                                        <img src="../img/thumb-3.jpg" alt="thumbnail"/>
-                                                    </div>
-                                                    <span
-                                                        class="block txt-grey font-12 capitalize-font">8 Min</span>
-                                                </div>
-                                            </a>
-                                        </div>
+{{--                                        <div class="sl-item">--}}
+{{--                                            <a href="javascript:void(0)">--}}
+{{--                                                <div class="sl-avatar avatar avatar-sm avatar-circle">--}}
+{{--                                                    <img class="img-responsive img-circle" src="../img/user1.png"--}}
+{{--                                                         alt="avatar"/>--}}
+{{--                                                </div>--}}
+{{--                                                <div class="sl-content">--}}
+{{--                                                    <p class="inline-block"><span--}}
+{{--                                                            class="capitalize-font txt-orange mr-5 weight-500">Evie Ono</span><span>added three new photos in the library</span>--}}
+{{--                                                    </p>--}}
+{{--                                                    <div class="activity-thumbnail">--}}
+{{--                                                        <img src="../img/thumb-1.jpg" alt="thumbnail"/>--}}
+{{--                                                        <img src="../img/thumb-2.jpg" alt="thumbnail"/>--}}
+{{--                                                        <img src="../img/thumb-3.jpg" alt="thumbnail"/>--}}
+{{--                                                    </div>--}}
+{{--                                                    <span--}}
+{{--                                                        class="block txt-grey font-12 capitalize-font">8 Min</span>--}}
+{{--                                                </div>--}}
+{{--                                            </a>--}}
+{{--                                        </div>--}}
 
-                                        <div class="sl-item">
-                                            <a href="javascript:void(0)">
-                                                <div class="sl-avatar avatar avatar-sm avatar-circle">
-                                                    <img class="img-responsive img-circle" src="../img/user2.png"
-                                                         alt="avatar"/>
-                                                </div>
-                                                <div class="sl-content">
-                                                    <p class="inline-block"><span
-                                                            class="capitalize-font txt-orange mr-5 weight-500">madalyn rascon</span><span>assigned a new task</span>
-                                                    </p>
-                                                    <span
-                                                        class="block txt-grey font-12 capitalize-font">28 Min</span>
-                                                </div>
-                                            </a>
-                                        </div>
+{{--                                        <div class="sl-item">--}}
+{{--                                            <a href="javascript:void(0)">--}}
+{{--                                                <div class="sl-avatar avatar avatar-sm avatar-circle">--}}
+{{--                                                    <img class="img-responsive img-circle" src="../img/user2.png"--}}
+{{--                                                         alt="avatar"/>--}}
+{{--                                                </div>--}}
+{{--                                                <div class="sl-content">--}}
+{{--                                                    <p class="inline-block"><span--}}
+{{--                                                            class="capitalize-font txt-orange mr-5 weight-500">madalyn rascon</span><span>assigned a new task</span>--}}
+{{--                                                    </p>--}}
+{{--                                                    <span--}}
+{{--                                                        class="block txt-grey font-12 capitalize-font">28 Min</span>--}}
+{{--                                                </div>--}}
+{{--                                            </a>--}}
+{{--                                        </div>--}}
 
-                                        <div class="sl-item">
-                                            <a href="javascript:void(0)">
-                                                <div class="sl-avatar avatar avatar-sm avatar-circle">
-                                                    <img class="img-responsive img-circle" src="../img/user3.png"
-                                                         alt="avatar"/>
-                                                </div>
-                                                <div class="sl-content">
-                                                    <p class="inline-block"><span
-                                                            class="capitalize-font txt-orange mr-5 weight-500">Ezequiel Merideth</span><span>completed project wireframes</span>
-                                                    </p>
-                                                    <span
-                                                        class="block txt-grey font-12 capitalize-font">yesterday</span>
-                                                </div>
-                                            </a>
-                                        </div>
+{{--                                        <div class="sl-item">--}}
+{{--                                            <a href="javascript:void(0)">--}}
+{{--                                                <div class="sl-avatar avatar avatar-sm avatar-circle">--}}
+{{--                                                    <img class="img-responsive img-circle" src="../img/user3.png"--}}
+{{--                                                         alt="avatar"/>--}}
+{{--                                                </div>--}}
+{{--                                                <div class="sl-content">--}}
+{{--                                                    <p class="inline-block"><span--}}
+{{--                                                            class="capitalize-font txt-orange mr-5 weight-500">Ezequiel Merideth</span><span>completed project wireframes</span>--}}
+{{--                                                    </p>--}}
+{{--                                                    <span--}}
+{{--                                                        class="block txt-grey font-12 capitalize-font">yesterday</span>--}}
+{{--                                                </div>--}}
+{{--                                            </a>--}}
+{{--                                        </div>--}}
 
-                                        <div class="sl-item">
-                                            <a href="javascript:void(0)">
-                                                <div class="sl-avatar avatar avatar-sm avatar-circle">
-                                                    <img class="img-responsive img-circle" src="../img/user4.png"
-                                                         alt="avatar"/>
-                                                </div>
-                                                <div class="sl-content">
-                                                    <p class="inline-block"><span
-                                                            class="capitalize-font txt-orange mr-5 weight-500">jonnie metoyer</span><span>created a group 'Hencework' in the discussion forum</span>
-                                                    </p>
-                                                    <span
-                                                        class="block txt-grey font-12 capitalize-font">18 feb</span>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-xs-12">
-                        <div class="panel panel-default border-panel card-view">
-                            <div class="panel-heading">
-                                <div class="">
-                                    <h6 class="panel-title txt-dark text-center">Latest testimonials</h6>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="panel-wrapper collapse in">
-                                <div class="panel-body">
-                                    <!-- START carousel-->
-                                    <div id="testimonial_slider" data-ride="carousel"
-                                         class="carousel slide testimonial-slider-wrap text-slider mb-85">
-                                        <ol class="carousel-indicators">
-                                            <li data-target="#testimonial_slider" data-slide-to="0"
-                                                class="active"></li>
-                                            <li data-target="#testimonial_slider" data-slide-to="1"></li>
-                                            <li data-target="#testimonial_slider" data-slide-to="2"></li>
-                                        </ol>
-                                        <div role="listbox" class="carousel-inner">
-                                            <div class="item active">
-                                                <div class="testimonial-wrap text-center">
-                                                    <p class="pt-20 font-16">"Activist, criteria planned giving
-                                                        dignity, committed democratizing the global financial system
-                                                        progressive."</p>
-                                                    <span
-                                                        class="testi-pers-name block mt-15  txt-dark capitalize-font head-font">
-    																Jens Brincker
-    															</span>
-                                                    <span class="testi-pers-desg block capitalize-font">
-    																Interaction Designer
-    															</span>
-                                                </div>
-                                            </div>
-                                            <div class="item">
-                                                <div class="testimonial-wrap text-center">
-                                                    <p class="pt-20 font-16">"Nelson Mandela equal opportunity
-                                                        change accelerate pathway to a better life invest our
-                                                        ambitions catalyst."</p>
-                                                    <span
-                                                        class="testi-pers-name block mt-15  txt-dark capitalize-font head-font">
-    																Mark Hay
-    															</span>
-                                                    <span class="testi-pers-desg block capitalize-font">
-    																Interface Designer
-    															</span>
-                                                </div>
-                                            </div>
+{{--                                        <div class="sl-item">--}}
+{{--                                            <a href="javascript:void(0)">--}}
+{{--                                                <div class="sl-avatar avatar avatar-sm avatar-circle">--}}
+{{--                                                    <img class="img-responsive img-circle" src="../img/user4.png"--}}
+{{--                                                         alt="avatar"/>--}}
+{{--                                                </div>--}}
+{{--                                                <div class="sl-content">--}}
+{{--                                                    <p class="inline-block"><span--}}
+{{--                                                            class="capitalize-font txt-orange mr-5 weight-500">jonnie metoyer</span><span>created a group 'Hencework' in the discussion forum</span>--}}
+{{--                                                    </p>--}}
+{{--                                                    <span--}}
+{{--                                                        class="block txt-grey font-12 capitalize-font">18 feb</span>--}}
+{{--                                                </div>--}}
+{{--                                            </a>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="col-sm-12 col-xs-12">--}}
+{{--                        <div class="panel panel-default border-panel card-view">--}}
+{{--                            <div class="panel-heading">--}}
+{{--                                <div class="">--}}
+{{--                                    <h6 class="panel-title txt-dark text-center">Latest testimonials</h6>--}}
+{{--                                </div>--}}
+{{--                                <div class="clearfix"></div>--}}
+{{--                            </div>--}}
+{{--                            <div class="panel-wrapper collapse in">--}}
+{{--                                <div class="panel-body">--}}
+{{--                                    <!-- START carousel-->--}}
+{{--                                    <div id="testimonial_slider" data-ride="carousel"--}}
+{{--                                         class="carousel slide testimonial-slider-wrap text-slider mb-85">--}}
+{{--                                        <ol class="carousel-indicators">--}}
+{{--                                            <li data-target="#testimonial_slider" data-slide-to="0"--}}
+{{--                                                class="active"></li>--}}
+{{--                                            <li data-target="#testimonial_slider" data-slide-to="1"></li>--}}
+{{--                                            <li data-target="#testimonial_slider" data-slide-to="2"></li>--}}
+{{--                                        </ol>--}}
+{{--                                        <div role="listbox" class="carousel-inner">--}}
+{{--                                            <div class="item active">--}}
+{{--                                                <div class="testimonial-wrap text-center">--}}
+{{--                                                    <p class="pt-20 font-16">"Activist, criteria planned giving--}}
+{{--                                                        dignity, committed democratizing the global financial system--}}
+{{--                                                        progressive."</p>--}}
+{{--                                                    <span--}}
+{{--                                                        class="testi-pers-name block mt-15  txt-dark capitalize-font head-font">--}}
+{{--    																Jens Brincker--}}
+{{--    															</span>--}}
+{{--                                                    <span class="testi-pers-desg block capitalize-font">--}}
+{{--    																Interaction Designer--}}
+{{--    															</span>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="item">--}}
+{{--                                                <div class="testimonial-wrap text-center">--}}
+{{--                                                    <p class="pt-20 font-16">"Nelson Mandela equal opportunity--}}
+{{--                                                        change accelerate pathway to a better life invest our--}}
+{{--                                                        ambitions catalyst."</p>--}}
+{{--                                                    <span--}}
+{{--                                                        class="testi-pers-name block mt-15  txt-dark capitalize-font head-font">--}}
+{{--    																Mark Hay--}}
+{{--    															</span>--}}
+{{--                                                    <span class="testi-pers-desg block capitalize-font">--}}
+{{--    																Interface Designer--}}
+{{--    															</span>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
 
-                                            <div class="item">
-                                                <div class="testimonial-wrap text-center">
-                                                    <p class="pt-20 font-16">"Making progress contribution
-                                                        compassion Ford Foundation, cross-agency coordination Bill
-                                                        development."</p>
-                                                    <span
-                                                        class="testi-pers-name block mt-15  txt-dark capitalize-font head-font">
-    																Anthony Davie
-    															</span>
-                                                    <span class="testi-pers-desg block capitalize-font">
-    																Project Manager
-    															</span>
-                                                </div>
-                                            </div>
+{{--                                            <div class="item">--}}
+{{--                                                <div class="testimonial-wrap text-center">--}}
+{{--                                                    <p class="pt-20 font-16">"Making progress contribution--}}
+{{--                                                        compassion Ford Foundation, cross-agency coordination Bill--}}
+{{--                                                        development."</p>--}}
+{{--                                                    <span--}}
+{{--                                                        class="testi-pers-name block mt-15  txt-dark capitalize-font head-font">--}}
+{{--    																Anthony Davie--}}
+{{--    															</span>--}}
+{{--                                                    <span class="testi-pers-desg block capitalize-font">--}}
+{{--    																Project Manager--}}
+{{--    															</span>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
 
-                                        </div>
-                                    </div>
-                                    <!-- END carousel-->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <!-- END carousel-->--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
         </div>
 @endsection

@@ -25,6 +25,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 
     Route::get('/dashboardClient', [App\Http\Controllers\DashboardController::class, 'dashboardClient'])->name('dashboard-client');
+    Route::get('/dashboardAdmin', [App\Http\Controllers\DashboardController::class, 'dashboardAdmin'])->name('dashboard-admin');
 
     Route::group(['prefix' => 'distributors'], function () {
         Route::get('/', [\App\Http\Controllers\DistributorController::class, 'index'])->name('distributors.index');
@@ -46,8 +47,17 @@ Route::group(['middleware' => 'auth'], function () {
         Route::put('/active/{id}', [\App\Http\Controllers\ClientController::class, 'active'])->name('clients.active');
     });
 
+    Route::group(['prefix' => 'users'], function () {
+        Route::get('/', [\App\Http\Controllers\UserController::class, 'index'])->name('users.index');
+        Route::get('/create', [\App\Http\Controllers\UserController::class, 'create'])->name('users.create');
+        Route::post('/store', [\App\Http\Controllers\UserController::class, 'store'])->name('users.store');
+        Route::get('/edit/{id}', [\App\Http\Controllers\UserController::class, 'edit'])->name('users.edit');
+        Route::put('/update/{id}', [\App\Http\Controllers\UserController::class, 'update'])->name('users.update');
+        Route::put('/disable/{id}', [\App\Http\Controllers\UserController::class, 'destroy'])->name('users.disable');
+        Route::put('/enable/{id}', [\App\Http\Controllers\UserController::class, 'active'])->name('users.enable');
+    });
     Route::group(['prefix' => 'invoices'], function () {
-        Route::get('/', [\App\Http\Controllers\InvoiceController::class, 'index'])->name('invoices.index');
+        Route::get('/list-invoices', [\App\Http\Controllers\InvoiceController::class, 'index'])->name('invoices.index');
         Route::get('/my-invoices', [\App\Http\Controllers\InvoiceController::class, 'myInvoices'])->name('invoices.my-invoices');
         Route::get('/client/{id}', [\App\Http\Controllers\InvoiceController::class, 'invoiceByClient'])->name('invoices.client');
         Route::get('/print/{id}', [\App\Http\Controllers\InvoiceController::class, 'printInvoice'])->name('invoices.print');
